@@ -1,0 +1,32 @@
+<h1 style="text-align: center; font-size: 30px; text-shadow: 3px 2px #414141;">Registros del usuario: {{userIdentifier}}</h1>
+<div style="display: flex; flex-direction: row; margin: 0% 2%;">
+  <div class="session-list-container">
+    <h4 style="color: #f5e9e9; text-decoration: underline;">Inicios de sesión:</h4>
+    <div class="session-list-item" *ngFor="let session of sessionList let i = index">
+      <h5>inicio de aplicación: {{session.StartTimeApp | date: 'short'}} / Tiempo de sesión: {{session.Duration}} segundos</h5>
+      <button option (click)="showChartsSession(i)">Ver detalles</button>
+      <hr style="height: 0.1px;border-style: dashed;">
+    </div>
+  </div>
+  <div *ngIf="activityTimeData.length!=0" class="charts-container">
+    <div class="single-chart">
+      <h2>Balance total de actividad</h2>
+      <app-inactivity-session-pie [item]="activityTimeData"></app-inactivity-session-pie>
+    </div>
+    <div class="single-chart">
+      <h2>Registro de actividad por hora</h2>
+      <app-inactivity-hours-bar [item]="registerHours"></app-inactivity-hours-bar>
+    </div>
+    <div class="single-chart">
+      <h2>Interrupciones por transacción</h2>
+      <app-transaction-counter-chart [item]="registerTransactions"></app-transaction-counter-chart>
+    </div>
+    <div class="single-chart">
+      <h2>Reporte de eventos y duración</h2>
+      <app-time-event-bar [item]="valuesTimeEventChart"></app-time-event-bar>
+    </div>
+  </div>
+  <div *ngIf="activityTimeData.length==0" style="display: block; margin: auto;">
+    <h1>🠔 Seleccione un registro de la lista</h1>
+  </div>
+</div>

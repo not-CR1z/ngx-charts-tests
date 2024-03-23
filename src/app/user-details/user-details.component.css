@@ -1,0 +1,50 @@
+
+.charts-container {
+    width: 75vw;
+    height: 83.6vh;
+    overflow-x: auto;
+    border: 1px solid #4e4e4e;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .single-chart {
+    background: rgb(36, 36, 44);
+    background: linear-gradient(#24242c, #1e1e35);
+    border-radius: 5%;
+    padding: 1% 2% 5% 2%;
+    margin: 1%;
+    transition: transform 0.2s;
+  }
+  
+  .single-chart:hover {
+    transform: scale(1.02);
+    background: linear-gradient(#1f1f27, #1e1e42);
+  }
+  
+  .session-list-container {
+    width: 24vw;
+    height: 79.3vh;
+    overflow-x: auto;
+    border: 1px solid #4e4e4e;
+    padding: 1%;
+    margin: 0;
+  }
+  
+  button{
+    width: 120px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: #3c3c79;
+    color: aliceblue;
+    display: block;
+    margin: auto;
+  }
+  
+  button:hover{
+    background-color: #4c4ca5;
+    transform: scale(1.02);
+  }
+  

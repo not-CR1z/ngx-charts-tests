@@ -1,0 +1,69 @@
+b {
+    font-size: 1.5em;
+    margin-right: 1em;
+}
+
+h1 {
+    margin: auto;
+    text-shadow: 3px 2px #131e1e;
+    margin: 3%;
+}
+
+h2 {
+    text-align: center;
+}
+
+.charts-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 2%;
+}
+
+.chart-dashboard {
+    padding: 1%;
+    background-color: #303a56;
+    background: linear-gradient(#1f1f27, #303a56);
+    margin: 0% 2%;
+    border-radius: 2%;
+}
+
+.chart-dashboard:hover {
+    background: linear-gradient(#17171d, #1e1e42);
+}
+
+.spinner-container {
+    background-color: #0000009f;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 998;
+}
+
+.spinner {
+    border: 4px solid rgba(17, 17, 17, 0.705);
+    /* Color del spinner */
+    border-top: 4px solid #fff;
+    /* Color de la parte superior del spinner */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    /* Animación de rotación */
+    position: fixed;
+    top: 50%;
+    left: 48%;
+    z-index: 9999;
+    /* Por encima de los demás elementos */
+
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

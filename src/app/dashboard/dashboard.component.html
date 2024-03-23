@@ -1,0 +1,65 @@
+<div class="spinner-container" *ngIf="spinner">
+    <div class="spinner"></div>
+</div>
+<h1><b>SB MONITOR</b></h1>
+<div class="container" style="display: flex; flex-direction: column;">
+    <div style="margin-top: 2%; margin: auto;">
+        <mat-form-field>
+            <mat-label>Seleccione una fecha</mat-label>
+            <input matInput [matDatepicker]="picker" [(ngModel)]="dateSelected">
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+    </div>
+    <div *ngIf="dateSelected != null" style="display: flex; flex-direction: row; justify-content: space-evenly;">
+        <div>
+            <b>Top-Usuarios más inactivos</b>
+            <button id="btn" mat-raised-button color="primary" (click)="getTopInactivity()">Ver</button>
+        </div>
+        <div>
+            <b>Top-Usuarios con menos transacciones</b>
+            <button mat-raised-button color="primary" (click)="getTopTransactions()">Ver</button>
+        </div>
+    </div>
+    <div class="charts-container">
+        <div *ngIf="showTopInactivity" class="chart-dashboard" style="width: 60vw;">
+            <app-top-inactivity [item]="dataInactivity" [date]="dateSelected"></app-top-inactivity>
+        </div>
+        <div *ngIf="showTopTransactions" class="chart-dashboard"
+            style="width: 300px; justify-content: center; align-items: center;">
+            <app-top-transactions [item]="dataTransactions" [date]="dateSelected"></app-top-transactions>
+        </div>
+        <div *ngIf="!showTopInactivity && !showTopTransactions" class="charts-container">
+            <b>Por favor seleccione una fecha válida y escoja los resultados que desea ver</b>
+        </div>
+    </div>
+</div>
+
+<div style="height: 50vh;">
+<ngx-charts-bubble-chart 
+  [view]="view"
+  scheme="nightLights"
+  [results]="bubbleData"
+  [xAxis]="showXAxis"
+  [yAxis]="showYAxis"
+  [legend]="showLegend"
+  [showXAxisLabel]="showXAxisLabel"
+  [showYAxisLabel]="showYAxisLabel"
+  [xAxisLabel]="xAxisLabel"
+  [yAxisLabel]="yAxisLabel"
+  [minRadius]="minRadius"
+  [maxRadius]="maxRadius"
+  (select)="onSelect($event)"
+  (activate)="onActivate($event)"
+  (deactivate)="onDeactivate($event)"
+  style="fill: #aaa7a7;"
+  >
+  <ng-template #tooltipTemplate let-model="model">
+      {{model.name}}<br>
+      Hora: {{model.Hora}} // {{model.y}} segundos<br>
+    Activo: {{model.Activo}}<br>
+    Inactivo: {{model.Inactivo}}<br>
+</ng-template>
+</ngx-charts-bubble-chart>
+</div>

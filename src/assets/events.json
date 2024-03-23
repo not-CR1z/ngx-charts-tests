@@ -1,0 +1,79 @@
+[
+  {
+    "Events": [
+      {
+        "ServiceName": "TransactionWindow",
+        "EventCode": 2,
+        "EventStart": "2024-02-29 15:34:40",
+        "EventEnd": "2024-02-29 15:34:43",
+        "EventDuration": 3.02
+      },
+      {
+        "ServiceName": "TransactionWindow",
+        "EventCode": 2,
+        "EventStart": "2024-02-29 15:34:57",
+        "EventEnd": "2024-02-29 15:34:57",
+        "EventDuration": 0.17
+      },
+      {
+        "ServiceName": "TransactionWindow",
+        "EventCode": 0,
+        "EventStart": "2024-02-29 15:35:01",
+        "EventEnd": "2024-02-29 15:35:02",
+        "EventDuration": 1.39
+      }
+    ],
+    "StartTimeApp": "2024-02-29 15:34:38",
+    "EndTimeApp": "2024-02-29 15:35:06",
+    "Duration": 27.82,
+    "TotalMinimized": 1,
+    "TotalUnfocus": 0,
+    "TotalClickOut": 2
+  },
+  {
+    "Events": [
+      {
+        "ServiceName": "TransactionWindow",
+        "EventCode": 2,
+        "EventStart": "2024-02-29 15:48:16",
+        "EventEnd": "2024-02-29 15:48:16",
+        "EventDuration": 0.41
+      },
+      {
+        "ServiceName": "TransactionWindow",
+        "EventCode": 2,
+        "EventStart": "2024-02-29 15:49:12",
+        "EventEnd": "2024-02-29 15:49:12",
+        "EventDuration": 0.12
+      },
+      {
+        "ServiceName": "TransactionWindow",
+        "EventCode": 0,
+        "EventStart": "2024-02-29 15:49:15",
+        "EventEnd": "2024-02-29 15:49:17",
+        "EventDuration": 1.41
+      },
+      {
+        "ServiceName": "TransactionWindow",
+        "EventCode": 2,
+        "EventStart": "2024-02-29 15:49:22",
+        "EventEnd": "2024-02-29 15:49:23",
+        "EventDuration": 0.47
+      },
+      {
+        "ServiceName": "TransactionWindow",
+        "EventCode": 2,
+        "EventStart": "2024-02-29 15:49:22",
+        "EventEnd": "2024-02-29 15:49:23",
+        "EventDuration": 0.47
+      }
+    ],
+    "StartTimeApp": "2024-02-29 15:48:13",
+    "EndTimeApp": "2024-02-29 15:49:27",
+    "Duration": 74.09,
+    "TotalMinimized": 1,
+    "TotalUnfocus": 0,
+    "TotalClickOut": 4
+  }
+  
+]

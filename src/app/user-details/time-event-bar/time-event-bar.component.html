@@ -1,0 +1,17 @@
+<ngx-charts-bar-horizontal
+  [view]="view"
+  scheme="cool"
+  [results]="valuesTimeEventChart"
+  [gradient]="gradient"
+  [xAxis]="showXAxis"
+  [yAxis]="showYAxis"
+  [legend]="showLegend"
+  [showXAxisLabel]="showXAxisLabel"
+  [showYAxisLabel]="showYAxisLabel"
+  [xAxisLabel]="xAxisLabel"
+  [yAxisLabel]="yAxisLabel"
+  (select)="onSelect($event)"
+  (activate)="onActivate($event)"
+  (deactivate)="onDeactivate($event)"
+  style="fill: #aaa7a7;">
+</ngx-charts-bar-horizontal>

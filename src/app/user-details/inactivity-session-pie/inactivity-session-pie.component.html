@@ -1,0 +1,15 @@
+<ngx-charts-pie-chart
+  [view]="view"
+  scheme="flame"
+  [results]="valuesInactivityPie"
+  [gradient]="gradient"
+  [legend]="showLegend"
+  [legendPosition]="legendPosition"
+  [labels]="showLabels"
+  [doughnut]="isDoughnut"
+  (select)="onSelect($event)"
+  (activate)="onActivate($event)"
+  (deactivate)="onDeactivate($event)"
+  style="fill: #aaa7a7;"
+  >
+</ngx-charts-pie-chart>
